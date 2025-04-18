@@ -24,11 +24,16 @@ namespace Rest
 
         public static void InitializeClient(Scope scope)
         {
-            var restOptions = new RestClientOptions("http://localhost:3355")
+            var restOptions = new RestClientOptions(Configuration.BaseUrl)
             {
                 Authenticator = new RestTrainingAuthenticator(scope)
             };
             _restClient = new RestClient(restOptions);
+        }
+
+        public static RestResponse ExecuteRequest(RestRequest request)
+        {
+            return _restClient.ExecuteAsync(request).Result;
         }
 
         public void Dispose()
