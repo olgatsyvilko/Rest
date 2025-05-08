@@ -1,5 +1,7 @@
-﻿using Rest.Enums;
+﻿using Rest.Core;
+using Rest.Enums;
 using RestSharp;
+using System.Net;
 
 namespace Rest.Services
 {
@@ -16,8 +18,21 @@ namespace Rest.Services
 
             RestTrainingClient.InitializeClient(scope);
             var response = RestTrainingClient.ExecuteRequest(request);
-            
+
+            ValidateResponse(response, resource, method);
+
             return response;
+        }
+
+        private static void ValidateResponse(RestResponse response, string resource, Method method)
+        {
+            var successfulCodes = new List<HttpStatusCode> { HttpStatusCode.OK, HttpStatusCode.Created, HttpStatusCode.Accepted, HttpStatusCode.NoContent };
+
+            if (!successfulCodes.Contains(response.StatusCode))
+            {
+                var message = $"{method} request '{resource}' is failed with status: {response.StatusCode} and message: {response.ErrorMessage}";
+                throw new Exception(message);
+            }
         }
     }
 }

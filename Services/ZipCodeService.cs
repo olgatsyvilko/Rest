@@ -1,4 +1,5 @@
-﻿using Rest.Enums;
+﻿using Rest.Core;
+using Rest.Enums;
 using RestSharp;
 
 namespace Rest.Services
@@ -7,14 +8,12 @@ namespace Rest.Services
     {
         public RestResponse GetZipCodes()
         {
-            var resource = $"/zip-codes";
-            return CreateAndExecuteRequest(resource, Method.Get, Scope.Read);
+            return CreateAndExecuteRequest(ResourceNames.ZipCodeService, Method.Get, Scope.Read);
         }
 
         public RestResponse AddZipCodes(object codes)
         {
-            var resource = $"/zip-codes/expand";
-            return CreateAndExecuteRequest(resource, Method.Post, Scope.Write, codes);
+            return CreateAndExecuteRequest(ResourceNames.ExpandZipCodeService, Method.Post, Scope.Write, codes);
         }
     }
 }

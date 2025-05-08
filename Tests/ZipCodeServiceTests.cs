@@ -1,5 +1,6 @@
 ﻿using Newtonsoft.Json;
 using NUnit.Framework;
+using Rest.Helpers;
 using Rest.Services;
 using System.Net;
 
@@ -11,11 +12,13 @@ namespace Rest.Tests
         private readonly ZipCodeService zipCodeService = new();
 
         [Test]
-        public void CallGetZipCodes_ResponseStatusCode_IsOK()
+        public void GetZipCodes_ResponseStatusCode_IsOK_ZipCodesAreReturned()
         {
             var response = zipCodeService.GetZipCodes();
+            var availableZipCodes = JsonConvert.DeserializeObject<string[]>(response.Content!);
 
             Assert.That(response.StatusCode.Equals(HttpStatusCode.OK), $"Response Status Code is '{response.StatusCode}'");
+            Assert.That(availableZipCodes!.Length > 0, "Available Zip Codes list is empty");
         }
 
         // Bug title: Response status code is not 'OK'
@@ -24,18 +27,9 @@ namespace Rest.Tests
         // Actual result: Response status code is 'Created'
 
         [Test]
-        public void GetZipCodes_AvailableZipCodes_AreReturned()
-        {
-            var response = zipCodeService.GetZipCodes();
-            var availableZipCodes = JsonConvert.DeserializeObject<string[]>(response.Content!);
-           
-            Assert.That(availableZipCodes!.Length > 0, "Available Zip Codes list is empty");
-        }
-
-        [Test]
         public void CallExpandZipCodes_ResponseStatusCode_IsCreated()
         {
-            var newZipCodes = CreateRandomArray();
+            var newZipCodes = RandomHelper.CreateRandomArray(3);
 
             var response = zipCodeService.AddZipCodes(newZipCodes);
 
@@ -45,7 +39,7 @@ namespace Rest.Tests
         [Test]
         public void ExpandZipCodes_NewZipCodes_AreAddedToAvailable()
         {
-            var newZipCodes = CreateRandomArray();
+            var newZipCodes = RandomHelper.CreateRandomArray(3);
 
             var zipCodesFromResponse = JsonConvert.DeserializeObject<string[]>(zipCodeService.AddZipCodes(newZipCodes).Content!);
             var availableZipCodes = JsonConvert.DeserializeObject<string[]>(zipCodeService.GetZipCodes().Content!);
@@ -65,7 +59,7 @@ namespace Rest.Tests
         public void ExpandZipCodes_NewZipCodesHaveDublicates_DublicatesAreNotAdded()
         {
             // Create random array with dublicates
-            var newZipCodes = CreateRandomArray();
+            var newZipCodes = RandomHelper.CreateRandomArray(3);
             var newZipCodesWithDublicates = newZipCodes.Concat(newZipCodes.Clone() as string[]).ToArray();
 
             // Get available zip codes list before adding new zip codes
@@ -86,17 +80,5 @@ namespace Rest.Tests
         // Steps to reproduce: create request body with dublicates -> call /zip-codes/expand service -> call /zip-codes service and check response content
         // Expected result: Response content does not contain duplicates
         // Actual result: Response content contains duplicates
-
-        private static string[] CreateRandomArray()
-        {
-            var array = new string[3];
-            Random random = new();
-
-            for (int i = 0; i < array.Length; i++)
-            {
-                array[i] = random.Next(0, 99999).ToString();
-            }
-            return array;
-        }
     }
 }

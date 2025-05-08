@@ -1,4 +1,4 @@
-﻿namespace Rest
+﻿namespace Rest.Core
 {
     public static class Configuration
     {

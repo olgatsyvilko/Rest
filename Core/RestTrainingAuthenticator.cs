@@ -3,7 +3,7 @@ using Rest.Models;
 using RestSharp;
 using RestSharp.Authenticators;
 
-namespace Rest
+namespace Rest.Core
 {
     public class RestTrainingAuthenticator(Scope scope) : AuthenticatorBase(string.Empty)
     {

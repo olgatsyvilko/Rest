@@ -1,7 +1,7 @@
 ﻿using Rest.Enums;
 using RestSharp;
 
-namespace Rest
+namespace Rest.Core
 {
     public class RestTrainingClient : IDisposable
     {
