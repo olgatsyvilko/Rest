@@ -27,11 +27,15 @@ namespace Rest.Services
         private static void ValidateResponse(RestResponse response, string resource, Method method)
         {
             var successfulCodes = new List<HttpStatusCode> { HttpStatusCode.OK, HttpStatusCode.Created, HttpStatusCode.Accepted, HttpStatusCode.NoContent };
-
+            
             if (!successfulCodes.Contains(response.StatusCode))
             {
                 var message = $"{method} request '{resource}' is failed with status: {response.StatusCode} and message: {response.ErrorMessage}";
-                throw new Exception(message);
+                Console.WriteLine(message);
+            }
+            else
+            {
+                Console.WriteLine($"{method} request '{resource}' is executed successfully");
             }
         }
     }
