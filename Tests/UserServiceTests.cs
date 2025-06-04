@@ -1,5 +1,5 @@
-﻿using Newtonsoft.Json;
-using NUnit.Framework;
+﻿using NUnit.Framework;
+using Rest.Extensions;
 using Rest.Helpers;
 using Rest.Models;
 using Rest.Services;
@@ -16,7 +16,7 @@ namespace Rest.Tests
         [Test]
         public void CreateUser_AllFieldsAreFilledIn_ResponseStatusCodeIsCreated_UserIsAdded_UsedZipCodeIsRemoved()
         {
-            var availableZipCodes = JsonConvert.DeserializeObject<string[]>(zipCodeService.GetZipCodes().Content!);
+            var availableZipCodes = zipCodeService.GetZipCodes().DeserializeResponseContent<string[]>();
 
             var userDto = new UserDto()
             {
@@ -27,8 +27,9 @@ namespace Rest.Tests
             };
 
             var response = userService.CreateUser(userDto);
-            var allUsers = JsonConvert.DeserializeObject<UserDto[]>(userService.GetUsers().Content!);
-            availableZipCodes = JsonConvert.DeserializeObject<string[]>(zipCodeService.GetZipCodes().Content!);
+
+            var allUsers = userService.GetUsers().DeserializeResponseContent<UserDto[]>();
+            availableZipCodes = zipCodeService.GetZipCodes().DeserializeResponseContent<string[]>();
 
             Assert.Multiple(() =>
             {
@@ -54,7 +55,7 @@ namespace Rest.Tests
             };
 
             var response = userService.CreateUser(userDto);
-            var allUsers = JsonConvert.DeserializeObject<UserDto[]>(userService.GetUsers().Content!);
+            var allUsers = userService.GetUsers().DeserializeResponseContent<UserDto[]>();
 
             Assert.Multiple(() =>
             {
@@ -75,7 +76,7 @@ namespace Rest.Tests
             };
 
             var response = userService.CreateUser(userDto);
-            var allUsers = JsonConvert.DeserializeObject<UserDto[]>(userService.GetUsers().Content!);
+            var allUsers = userService.GetUsers().DeserializeResponseContent<UserDto[]>();
 
             Assert.Multiple(() =>
             {
@@ -87,7 +88,7 @@ namespace Rest.Tests
         [Test]
         public void CreateUser_NameAndSexExist_ResponseStatusCodeIsBadRequest_UserIsNotAdded()
         {
-            var availableUsers = JsonConvert.DeserializeObject<UserDto[]>(userService.GetUsers().Content!);
+            var availableUsers = userService.GetUsers().DeserializeResponseContent<UserDto[]>();
 
             var userDto = new UserDto()
             {
@@ -97,7 +98,7 @@ namespace Rest.Tests
             };
 
             var response = userService.CreateUser(userDto);
-            var allUsers = JsonConvert.DeserializeObject<UserDto[]>(userService.GetUsers().Content!);
+            var allUsers = userService.GetUsers().DeserializeResponseContent<UserDto[]>();
 
             Assert.Multiple(() =>
             {
@@ -122,7 +123,7 @@ namespace Rest.Tests
             };
 
             var response = userService.CreateUser(userDto);
-            var allUsers = JsonConvert.DeserializeObject<UserDto[]>(userService.GetUsers().Content!);
+            var allUsers = userService.GetUsers().DeserializeResponseContent<UserDto[]>();
 
             Assert.Multiple(() =>
             {
@@ -141,7 +142,7 @@ namespace Rest.Tests
             };
 
             var response = userService.CreateUser(userDto);
-            var allUsers = JsonConvert.DeserializeObject<UserDto[]>(userService.GetUsers().Content!);
+            var allUsers = userService.GetUsers().DeserializeResponseContent<UserDto[]>();
 
             Assert.Multiple(() =>
             {

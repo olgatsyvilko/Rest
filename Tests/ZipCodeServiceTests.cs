@@ -1,5 +1,5 @@
-﻿using Newtonsoft.Json;
-using NUnit.Framework;
+﻿using NUnit.Framework;
+using Rest.Extensions;
 using Rest.Helpers;
 using Rest.Services;
 using System.Net;
@@ -15,7 +15,7 @@ namespace Rest.Tests
         public void GetZipCodes_ResponseStatusCode_IsOK_ZipCodesAreReturned()
         {
             var response = zipCodeService.GetZipCodes();
-            var availableZipCodes = JsonConvert.DeserializeObject<string[]>(response.Content!);
+            var availableZipCodes = response.DeserializeResponseContent<string[]>();
 
             Assert.That(response.StatusCode.Equals(HttpStatusCode.OK), $"Response Status Code is '{response.StatusCode}'");
             Assert.That(availableZipCodes!.Length > 0, "Available Zip Codes list is empty");
@@ -41,8 +41,8 @@ namespace Rest.Tests
         {
             var newZipCodes = RandomHelper.CreateRandomArray(3);
 
-            var zipCodesFromResponse = JsonConvert.DeserializeObject<string[]>(zipCodeService.AddZipCodes(newZipCodes).Content!);
-            var availableZipCodes = JsonConvert.DeserializeObject<string[]>(zipCodeService.GetZipCodes().Content!);
+            var zipCodesFromResponse = zipCodeService.AddZipCodes(newZipCodes).DeserializeResponseContent<string[]>();
+            var availableZipCodes = zipCodeService.GetZipCodes().DeserializeResponseContent<string[]>();
 
             Assert.That(availableZipCodes!.SequenceEqual(zipCodesFromResponse!), Is.True, "Available Zip Codes list does not contain new codes");
         }
@@ -63,7 +63,7 @@ namespace Rest.Tests
             var newZipCodesWithDublicates = newZipCodes.Concat(newZipCodes.Clone() as string[]).ToArray();
 
             // Get available zip codes list before adding new zip codes
-            var availableZipCodes = JsonConvert.DeserializeObject<string[]>(zipCodeService.GetZipCodes().Content!);
+            var availableZipCodes = zipCodeService.GetZipCodes().DeserializeResponseContent<string[]>();
 
             // Prepare expected available zip codes list without dublicates
             var expectedAvailableZipCodes = availableZipCodes!.Concat(newZipCodes).Distinct();
@@ -71,7 +71,7 @@ namespace Rest.Tests
             // Add new zip codes with dublicates
             zipCodeService.AddZipCodes(newZipCodesWithDublicates);
 
-            availableZipCodes = JsonConvert.DeserializeObject<string[]>(zipCodeService.GetZipCodes().Content!);
+            availableZipCodes = zipCodeService.GetZipCodes().DeserializeResponseContent<string[]>();
 
             Assert.That(availableZipCodes!.SequenceEqual(expectedAvailableZipCodes), Is.True, "Available Zip Codes list does not contain dublicates");
         }
