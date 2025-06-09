@@ -8,7 +8,7 @@ using System.Net;
 namespace Rest.Tests
 {
     [TestFixture]
-    public class UserServiceTests
+    public class CreateUserServiceTests
     {
         private readonly UserService userService = new();
         private readonly ZipCodeService zipCodeService = new();
@@ -33,13 +33,8 @@ namespace Rest.Tests
 
             Assert.Multiple(() =>
             {
-                Assert.That(response.StatusCode.Equals(HttpStatusCode.Created), $"Response Status Code is '{response.StatusCode}'");
-                
-                Assert.That(allUsers!.Any(u => u.Name.Equals(userDto.Name) 
-                && u.Sex.Equals(userDto.Sex) 
-                && u.Age.Equals(userDto.Age) 
-                && u.ZipCode.Equals(userDto.ZipCode)), Is.True, "User is NOT created");
-                
+                Assert.That(response.StatusCode.Equals(HttpStatusCode.Created), $"Response Status Code is '{response.StatusCode}'");               
+                Assert.That(allUsers!.Any(u => u.Equals(userDto)), Is.True, "User is NOT created");             
                 Assert.That(availableZipCodes!.Contains(userDto.ZipCode), Is.False, 
                     "Available Zip Codes list contains Zip Code used for User creation");
             });
