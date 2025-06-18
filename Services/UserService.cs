@@ -23,9 +23,19 @@ namespace Rest.Services
                 + $"&{secondFilter}={secondFilterValue}", Method.Get, Scope.Read);
         }
 
-        public RestResponse CreateUser(object user)
+        public RestResponse CreateUser(object userDto)
         {
-            return CreateAndExecuteRequest(ResourceNames.UserService, Method.Post, Scope.Write, user);
+            return CreateAndExecuteRequest(ResourceNames.UserService, Method.Post, Scope.Write, userDto);
+        }
+
+        public RestResponse UpdateUser(object updateUserDto)
+        {
+            return CreateAndExecuteRequest(ResourceNames.UserService, Method.Put, Scope.Write, updateUserDto);
+        }
+
+        public RestResponse PartiallyUpdateUser(object updateUserDto)
+        {
+            return CreateAndExecuteRequest(ResourceNames.UserService, Method.Patch, Scope.Write, updateUserDto);
         }
     }
 }
