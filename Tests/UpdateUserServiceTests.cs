@@ -26,7 +26,7 @@ namespace Rest.Tests
                 ZipCode = availableZipCodes![RandomHelper.CreateRandomInt() % availableZipCodes.Length]
             };
 
-            var updateUserDto = CreateUpdateUserDto(userNewValues);
+            var updateUserDto = TestDataHelper.CreateUpdateUserDto(userNewValues);
             var response = userService.UpdateUser(updateUserDto);
             var allUsers = userService.GetUsers().DeserializeResponseContent<UserDto[]>();
 
@@ -49,7 +49,7 @@ namespace Rest.Tests
                 ZipCode = RandomHelper.CreateRandomInt().ToString()
             };
 
-            var updateUserDto = CreateUpdateUserDto(userNewValues);
+            var updateUserDto = TestDataHelper.CreateUpdateUserDto(userNewValues);
             var response = userService.UpdateUser(updateUserDto);
             var allUsers = userService.GetUsers().DeserializeResponseContent<UserDto[]>();
 
@@ -78,7 +78,7 @@ namespace Rest.Tests
                 ZipCode = availableZipCodes![RandomHelper.CreateRandomInt() % availableZipCodes.Length]
             };
 
-            var updateUserDto = CreateUpdateUserDto(userNewValues);
+            var updateUserDto = TestDataHelper.CreateUpdateUserDto(userNewValues);
             var response = userService.UpdateUser(updateUserDto);
             var allUsers = userService.GetUsers().DeserializeResponseContent<UserDto[]>();
 
@@ -161,7 +161,7 @@ namespace Rest.Tests
         {
             var userNewValues = null as UserDto;
 
-            var updateUserDto = CreateUpdateUserDto(userNewValues);
+            var updateUserDto = TestDataHelper.CreateUpdateUserDto(userNewValues);
             var response = userService.UpdateUser(updateUserDto);
             var allUsers = userService.GetUsers().DeserializeResponseContent<UserDto[]>();
 
@@ -175,7 +175,7 @@ namespace Rest.Tests
         [Test]
         public void PartiallyUpdateUser_UserNewValueIsCorrect_ResponseStatusCodeIsOK_UserIsUpdated()
         {
-            var userToChange = GetRandomUser();
+            var userToChange = TestDataHelper.GetRandomUser();
 
             var userNewValues = new UserDto()
             {
@@ -211,7 +211,7 @@ namespace Rest.Tests
         [Test]
         public void PartiallyUpdateUser_UserNewValueIsCorrect_RequiredFiledIsMissed_ResponseStatusCodeIsConflict_UserIsNotUpdated()
         {
-            var userToChange = GetRandomUser();
+            var userToChange = TestDataHelper.GetRandomUser();
 
             var userNewValues = new UserDto()
             {
@@ -244,7 +244,7 @@ namespace Rest.Tests
         [Test]
         public void PartiallyUpdateUser_NewZipCodeIsIncorrect_ResponseStatusCodeIsFailedDependency_UserIsNotUpdated()
         {
-            var userToChange = GetRandomUser();
+            var userToChange = TestDataHelper.GetRandomUser();
 
             var userNewValues = new UserDto()
             {
@@ -274,22 +274,5 @@ namespace Rest.Tests
         // Steps to reproduce: create User model with invalid new value -> call /users service to update User with new value
         // Expected result: Existing User is not updated and not deleted
         // Actual result: Existing User is deleted
-
-        private UpdateUserDto CreateUpdateUserDto(UserDto userNewValues)
-        {
-            var updateUserDto = new UpdateUserDto()
-            {
-                UserNewValues = userNewValues,
-                UserToChange = GetRandomUser()
-            };
-
-            return updateUserDto;
-        }
-
-        private UserDto GetRandomUser()
-        {
-            var allUsers = userService.GetUsers().DeserializeResponseContent<UserDto[]>();
-            return allUsers![RandomHelper.CreateRandomInt() % allUsers.Length];
-        }
     }
 }
