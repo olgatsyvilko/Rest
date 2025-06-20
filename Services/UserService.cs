@@ -37,5 +37,10 @@ namespace Rest.Services
         {
             return CreateAndExecuteRequest(ResourceNames.UserService, Method.Patch, Scope.Write, updateUserDto);
         }
+
+        public RestResponse DeleteUser(object userDto)
+        {
+            return CreateAndExecuteRequest(ResourceNames.UserService, Method.Delete, Scope.Write, userDto);
+        }
     }
 }
