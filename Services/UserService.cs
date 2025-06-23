@@ -1,5 +1,6 @@
 ﻿using Rest.Core;
 using Rest.Enums;
+using Rest.Models;
 using RestSharp;
 
 namespace Rest.Services
@@ -38,7 +39,7 @@ namespace Rest.Services
             return CreateAndExecuteRequest(ResourceNames.UserService, Method.Patch, Scope.Write, updateUserDto);
         }
 
-        public RestResponse DeleteUser(object userDto)
+        public RestResponse DeleteUser(UserDto userDto)
         {
             return CreateAndExecuteRequest(ResourceNames.UserService, Method.Delete, Scope.Write, userDto);
         }
