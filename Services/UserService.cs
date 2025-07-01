@@ -43,5 +43,10 @@ namespace Rest.Services
         {
             return CreateAndExecuteRequest(ResourceNames.UserService, Method.Delete, Scope.Write, userDto);
         }
+
+        public RestResponse UploadUsers(string fileName)
+        {
+            return CreateAndExecuteRequest(ResourceNames.UploadUsersService, Method.Post, Scope.Write, fileName: fileName);
+        }
     }
 }

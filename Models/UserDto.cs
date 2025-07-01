@@ -1,19 +1,19 @@
-﻿using System.Text.Json.Serialization;
+﻿using Newtonsoft.Json;
 
 namespace Rest.Models
 {
     public class UserDto
     {
-        [JsonPropertyName("age")]
+        [JsonProperty(PropertyName = "age")]
         public int Age { get; init; }
 
-        [JsonPropertyName("name")]
+        [JsonProperty(PropertyName = "name")]
         public string Name { get; init; }
 
-        [JsonPropertyName("sex")]
+        [JsonProperty(PropertyName = "sex")]
         public string Sex { get; init; }
 
-        [JsonPropertyName("zipCode")]
+        [JsonProperty(PropertyName = "zipCode")]
         public string ZipCode { get; init; }
 
         public override bool Equals(object? obj)
