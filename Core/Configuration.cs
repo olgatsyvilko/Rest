@@ -1,6 +1,4 @@
-﻿using NUnit.Framework;
-
-namespace Rest.Core
+﻿namespace Rest.Core
 {
     public static class Configuration
     {
