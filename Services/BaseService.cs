@@ -1,4 +1,5 @@
-﻿using Rest.Core;
+﻿using NUnit.Framework;
+using Rest.Core;
 using Rest.Enums;
 using RestSharp;
 using System.Net;
@@ -19,9 +20,7 @@ namespace Rest.Services
 
             if (fileName != null)
             {
-                request.AddHeader("Content-Type", "multipart/form-data");
-                request.AddHeader("Accept", "application/json");
-                request.AddFile(name: "file", path: Configuration.FilePath + fileName, contentType: "multipart/form-data");
+                request.AddFile(name: "file", path: Path.Combine(TestContext.CurrentContext.TestDirectory, fileName), contentType: "multipart/form-data");
             }
 
             RestTrainingClient.InitializeClient(scope);
