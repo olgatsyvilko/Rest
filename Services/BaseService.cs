@@ -1,4 +1,5 @@
-﻿using Rest.Core;
+﻿using NUnit.Framework;
+using Rest.Core;
 using Rest.Enums;
 using RestSharp;
 using System.Net;
@@ -7,13 +8,19 @@ namespace Rest.Services
 {
     public class BaseService
     {
-        protected static RestResponse CreateAndExecuteRequest(string resource, Method method, Scope scope, object? model = null)
+        protected static RestResponse CreateAndExecuteRequest(string resource, Method method, Scope scope, object? model = null, 
+            string? fileName = null)
         {
             var request = new RestRequest(resource, method);
 
             if (model != null)
             {
                 request.AddJsonBody(model);
+            }
+
+            if (fileName != null)
+            {
+                request.AddFile(name: "file", path: Path.Combine(TestContext.CurrentContext.TestDirectory, fileName), contentType: "multipart/form-data");
             }
 
             RestTrainingClient.InitializeClient(scope);
