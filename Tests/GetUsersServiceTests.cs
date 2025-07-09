@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using Allure.NUnit.Attributes;
+using NUnit.Framework;
 using Rest.Core;
 using Rest.Enums;
 using Rest.Extensions;
@@ -10,7 +11,8 @@ using System.Net;
 namespace Rest.Tests
 {
     [TestFixture]
-    public class GetUsersServiceTests
+    [AllureSubSuite("Get User Service")]
+    public class GetUsersServiceTests : BaseTest
     {
         private readonly UserService userService = new();
 
@@ -130,18 +132,21 @@ namespace Rest.Tests
             Assert.That(response.StatusCode.Equals(HttpStatusCode.Conflict), $"Response Status Code is '{response.StatusCode}'");
         }
 
+        [AllureStep("Prepare Expected Users List Filtered By Age")]
         private UserDto[] PrepareExpectedUsersListFilteredByAge(int ageValue, bool older)
         {
             var allUsers = userService.GetUsers().DeserializeResponseContent<UserDto[]>();
             return [.. allUsers!.Where(user => older ? user.Age > ageValue : user.Age < ageValue)];
         }
 
+        [AllureStep("Prepare Expected Users List Filtered By Sex")]
         private UserDto[] PrepareExpectedUsersListFilteredBySex(Sex sexValue)
         {
             var allUsers = userService.GetUsers().DeserializeResponseContent<UserDto[]>();
             return [.. allUsers!.Where(user => user.Sex == sexValue.ToString())];
         }
 
+        [AllureStep("Prepare Expected Users List Filtered By Age And Sex")]
         private UserDto[] PrepareExpectedUsersListFilteredByAgeAndSex(int ageValue, bool older, Sex sexValue)
         {
             return [.. PrepareExpectedUsersListFilteredByAge(ageValue, older).Where(user => user.Sex == sexValue.ToString())];

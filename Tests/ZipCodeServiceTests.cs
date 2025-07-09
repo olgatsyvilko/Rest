@@ -1,4 +1,6 @@
-﻿using NUnit.Framework;
+﻿using Allure.Net.Commons;
+using Allure.NUnit.Attributes;
+using NUnit.Framework;
 using Rest.Extensions;
 using Rest.Helpers;
 using Rest.Services;
@@ -7,11 +9,13 @@ using System.Net;
 namespace Rest.Tests
 {
     [TestFixture]
-    public class ZipCodeServiceTests
+    [AllureSubSuite("Zip Code Service")]
+    public class ZipCodeServiceTests : BaseTest
     {
         private readonly ZipCodeService zipCodeService = new();
 
         [Test]
+        [AllureIssue("Response status code is not 'OK'")]
         public void GetZipCodes_ResponseStatusCode_IsOK_ZipCodesAreReturned()
         {
             var response = zipCodeService.GetZipCodes();
@@ -56,6 +60,7 @@ namespace Rest.Tests
         }
 
         [Test]
+        [AllureIssue("Available Zip Codes list contains dublicates")]
         public void ExpandZipCodes_NewZipCodesHaveDublicates_DublicatesAreNotAdded()
         {
             // Create random array with dublicates

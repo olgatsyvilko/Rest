@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using Allure.NUnit.Attributes;
+using NUnit.Framework;
 using Rest.Extensions;
 using Rest.Helpers;
 using Rest.Models;
@@ -8,7 +9,8 @@ using System.Net;
 namespace Rest.Tests
 {
     [TestFixture]
-    public class CreateUserServiceTests
+    [AllureSubSuite("Create User Service")]
+    public class CreateUserServiceTests : BaseTest
     {
         private readonly UserService userService = new();
         private readonly ZipCodeService zipCodeService = new();
@@ -81,6 +83,7 @@ namespace Rest.Tests
         }
 
         [Test]
+        [AllureIssue("User with the same Name and Sex as existing user is added")]
         public void CreateUser_NameAndSexExist_ResponseStatusCodeIsBadRequest_UserIsNotAdded()
         {
             var availableUsers = userService.GetUsers().DeserializeResponseContent<UserDto[]>();
