@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using Allure.NUnit.Attributes;
+using NUnit.Framework;
 using Rest.Extensions;
 using Rest.Helpers;
 using Rest.Models;
@@ -8,7 +9,8 @@ using System.Net;
 namespace Rest.Tests
 {
     [TestFixture]
-    public class DeleteUserServiceTests
+    [AllureSubSuite("Delete User Service")]
+    public class DeleteUserServiceTests : BaseTest
     {
         private readonly UserService userService = new();
         private readonly ZipCodeService zipCodeService = new();

@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using Allure.NUnit.Attributes;
+using NUnit.Framework;
 using Rest.Extensions;
 using Rest.Helpers;
 using Rest.Models;
@@ -8,7 +9,8 @@ using System.Net;
 namespace Rest.Tests
 {
     [TestFixture]
-    public class UploadUsersServiceTests
+    [AllureSubSuite("Upload Users Service")]
+    public class UploadUsersServiceTests : BaseTest
     {
         private readonly UserService userService = new();
 
@@ -29,6 +31,7 @@ namespace Rest.Tests
         }
 
         [Test]
+        [AllureIssue("Response status code is not 'Failed Dependency'")]
         public void UploadUsers_UserHasInvalidZipCode_ResponseStatusCodeIsFailedDependency_UsersAreNotUploaded()
         {
             var fileName = "usersHasInvalidZipCode.json";
@@ -60,6 +63,7 @@ namespace Rest.Tests
         // Actual result: Response status code is 'Internal Server Error'
 
         [Test]
+        [AllureIssue("Response status code is not 'Failed Dependency'")]
         public void UploadUsers_UserHasMissedRequiredField_ResponseStatusCodeIsConflict_UsersAreNotUploaded()
         {
             var fileName = "usersHasMissedRequiredField.json";

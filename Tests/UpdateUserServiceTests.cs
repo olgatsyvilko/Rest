@@ -1,4 +1,5 @@
-﻿using NUnit.Framework;
+﻿using Allure.NUnit.Attributes;
+using NUnit.Framework;
 using Rest.Extensions;
 using Rest.Helpers;
 using Rest.Models;
@@ -8,7 +9,8 @@ using System.Net;
 namespace Rest.Tests
 {
     [TestFixture]
-    public class UpdateUserServiceTests
+    [AllureSubSuite("Update User Service")]
+    public class UpdateUserServiceTests : BaseTest
     {
         private readonly UserService userService = new();
         private readonly ZipCodeService zipCodeService = new();
@@ -39,6 +41,7 @@ namespace Rest.Tests
         }
 
         [Test]
+        [AllureIssue("Existing User is deleted when trying to update it with invalid new values")]
         public void UpdateUser_NewZipCodeIsIncorrect_ResponseStatusCodeIsFailedDependency_UserIsNotUpdated()
         {
             var userNewValues = new UserDto()
@@ -67,6 +70,7 @@ namespace Rest.Tests
         // Actual result: Existing User is deleted
 
         [Test]
+        [AllureIssue("Existing User is deleted when trying to update it with valid new value but missed required field")]
         public void UpdateUser_RequiredFieldIsMissed_ResponseStatusCodeIsConflict_UserIsNotUpdated()
         {
             var availableZipCodes = zipCodeService.GetZipCodes().DeserializeResponseContent<string[]>();
@@ -173,6 +177,7 @@ namespace Rest.Tests
         }
 
         [Test]
+        [AllureIssue("Existing User is updated with default value for Zip Code when trying to update it without Zip Code in new values")]
         public void PartiallyUpdateUser_UserNewValueIsCorrect_ResponseStatusCodeIsOK_UserIsUpdated()
         {
             var userToChange = TestDataHelper.GetRandomUser();
@@ -209,6 +214,7 @@ namespace Rest.Tests
         // Actual result: Zip Code for Existing User is updated and equals null
 
         [Test]
+        [AllureIssue("Existing User is deleted when trying to update it with valid new value but missed required field")]
         public void PartiallyUpdateUser_UserNewValueIsCorrect_RequiredFiledIsMissed_ResponseStatusCodeIsConflict_UserIsNotUpdated()
         {
             var userToChange = TestDataHelper.GetRandomUser();
@@ -242,6 +248,7 @@ namespace Rest.Tests
         // Actual result: Existing User is deleted
 
         [Test]
+        [AllureIssue("Existing User is deleted when trying to update it with invalid new value")]
         public void PartiallyUpdateUser_NewZipCodeIsIncorrect_ResponseStatusCodeIsFailedDependency_UserIsNotUpdated()
         {
             var userToChange = TestDataHelper.GetRandomUser();

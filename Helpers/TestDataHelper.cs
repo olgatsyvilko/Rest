@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using Allure.NUnit.Attributes;
+using Newtonsoft.Json;
 using Rest.Extensions;
 using Rest.Models;
 using Rest.Services;
@@ -10,6 +11,7 @@ namespace Rest.Helpers
         private static readonly UserService userService = new();
         private static readonly ZipCodeService zipCodeService = new();
 
+        [AllureStep("Create Update User Dto")]
         public static UpdateUserDto CreateUpdateUserDto(UserDto userNewValues)
         {
             var updateUserDto = new UpdateUserDto()
@@ -21,12 +23,14 @@ namespace Rest.Helpers
             return updateUserDto;
         }
 
+        [AllureStep("Get Random User")]
         public static UserDto GetRandomUser()
         {
             var allUsers = userService.GetUsers().DeserializeResponseContent<UserDto[]>();
             return allUsers![RandomHelper.CreateRandomInt() % allUsers.Length];
         }
 
+        [AllureStep("Generate Json File With Users To Upload")]
         public static UserDto[] GenerateJsonFileWithUsers(int userCount, string fileName)
         {
             var users = CreateValidUsers(userCount);
@@ -35,6 +39,7 @@ namespace Rest.Helpers
             return users;
         }
 
+        [AllureStep("Generate Json File With Users With Invalid Data To Upload")]
         public static UserDto[] GenerateJsonFileWithUsersWithInvalidData(int userCount, UserDto invalidUser, string fileName)
         {
             var array = CreateValidUsers(userCount);
@@ -47,6 +52,7 @@ namespace Rest.Helpers
             return array;
         }
 
+        [AllureStep("Create Users List With Fields With Valid Values")]
         private static UserDto[] CreateValidUsers(int userCount)
         {
             var array = new UserDto[userCount];
