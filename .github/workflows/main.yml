@@ -22,10 +22,10 @@ jobs:
         uses: actions/checkout@v4
         
       - name: Restore NuGet packages
-        run: dotnet restore Rest/Rest.sln
+        run: dotnet restore Rest.sln
       
       - name: Run API tests
-        run: dotnet test Rest/Rest.sln --logger "trx"
+        run: dotnet test Rest.sln --logger "trx"
         
       - name: Load Allure Test Report history
         uses: actions/checkout@v3
