@@ -8,10 +8,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Pull API Docker image
-        run: docker pull coherentsolutions/rest-training:2.0
+        run: docker pull coherentsolutions/rest-training:1.0
       
       - name: Run API Docker container
-        run: docker run -d -p 3355:8082 coherentsolutions/rest-training:2.0      
+        run: docker run -d -p 3355:8082 coherentsolutions/rest-training:1.0      
       
       - name: Setup .Net SDK
         uses: actions/setup-dotnet@v4
