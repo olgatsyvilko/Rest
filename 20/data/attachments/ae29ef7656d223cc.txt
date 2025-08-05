@@ -1,0 +1,9 @@
+2025-08-05 13:45:01.8501|DEBUG|Rest.Tests.BaseTest|*** Test 'UploadUsers_AllFieldsAreFilledIn_ResponseStatusCodeIsCreated_UsersAreUploaded' is started ***
+2025-08-05 13:45:01.8517|TRACE|Rest.Services.BaseService|Execute Get request '/zip-codes'
+2025-08-05 13:45:01.8622|INFO|Rest.Services.BaseService|Get request '/zip-codes' is executed successfully
+2025-08-05 13:45:01.8639|TRACE|Rest.Services.BaseService|Add file: users.json
+2025-08-05 13:45:02.5480|TRACE|Rest.Services.BaseService|Execute Post request '/users/upload'
+2025-08-05 13:45:02.6020|ERROR|Rest.Services.BaseService|Post request '/users/upload' is failed with status: InternalServerError and message: 
+2025-08-05 13:45:02.9858|TRACE|Rest.Services.BaseService|Execute Get request '/users'
+2025-08-05 13:45:02.9943|INFO|Rest.Services.BaseService|Get request '/users' is executed successfully
+2025-08-05 13:45:02.9968|DEBUG|Rest.Tests.BaseTest|*** Test 'UploadUsers_AllFieldsAreFilledIn_ResponseStatusCodeIsCreated_UsersAreUploaded' is finished with 'Failed' status.***

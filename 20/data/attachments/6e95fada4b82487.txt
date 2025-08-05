@@ -1,0 +1,4 @@
+2025-08-05 13:45:05.1723|DEBUG|Rest.Tests.BaseTest|*** Test 'CallExpandZipCodes_RequestBodyIsNull_ResponseStatusCodeIsCorrect' is started ***
+2025-08-05 13:45:05.1723|TRACE|Rest.Services.BaseService|Execute Post request '/zip-codes/expand'
+2025-08-05 13:45:05.1812|ERROR|Rest.Services.BaseService|Post request '/zip-codes/expand' is failed with status: UnsupportedMediaType and message: 
+2025-08-05 13:45:05.1822|DEBUG|Rest.Tests.BaseTest|*** Test 'CallExpandZipCodes_RequestBodyIsNull_ResponseStatusCodeIsCorrect' is finished with 'Passed' status.***

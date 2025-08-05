@@ -1,0 +1,9 @@
+2025-08-05 13:45:04.1207|DEBUG|Rest.Tests.BaseTest|*** Test 'UploadUsers_UserHasMissedRequiredField_ResponseStatusCodeIsConflict_UsersAreNotUploaded' is started ***
+2025-08-05 13:45:04.1216|TRACE|Rest.Services.BaseService|Execute Get request '/zip-codes'
+2025-08-05 13:45:04.1299|INFO|Rest.Services.BaseService|Get request '/zip-codes' is executed successfully
+2025-08-05 13:45:04.1314|TRACE|Rest.Services.BaseService|Add file: usersHasMissedRequiredField.json
+2025-08-05 13:45:04.5751|TRACE|Rest.Services.BaseService|Execute Post request '/users/upload'
+2025-08-05 13:45:04.5889|ERROR|Rest.Services.BaseService|Post request '/users/upload' is failed with status: InternalServerError and message: 
+2025-08-05 13:45:05.0456|TRACE|Rest.Services.BaseService|Execute Get request '/users'
+2025-08-05 13:45:05.0538|INFO|Rest.Services.BaseService|Get request '/users' is executed successfully
+2025-08-05 13:45:05.0559|DEBUG|Rest.Tests.BaseTest|*** Test 'UploadUsers_UserHasMissedRequiredField_ResponseStatusCodeIsConflict_UsersAreNotUploaded' is finished with 'Failed' status.***

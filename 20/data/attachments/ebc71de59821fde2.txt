@@ -1,0 +1,6 @@
+2025-08-05 13:45:01.7854|DEBUG|Rest.Tests.BaseTest|*** Test 'UpdateUser_UserToChangeDoesNotExist_ResponseStatusCodeIsBadRequest' is started ***
+2025-08-05 13:45:01.7869|TRACE|Rest.Services.BaseService|Execute Put request '/users'
+2025-08-05 13:45:01.8008|ERROR|Rest.Services.BaseService|Put request '/users' is failed with status: BadRequest and message: 
+2025-08-05 13:45:01.8036|TRACE|Rest.Services.BaseService|Execute Get request '/users'
+2025-08-05 13:45:01.8173|INFO|Rest.Services.BaseService|Get request '/users' is executed successfully
+2025-08-05 13:45:01.8204|DEBUG|Rest.Tests.BaseTest|*** Test 'UpdateUser_UserToChangeDoesNotExist_ResponseStatusCodeIsBadRequest' is finished with 'Passed' status.***

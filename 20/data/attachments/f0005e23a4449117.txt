@@ -1,0 +1,6 @@
+2025-08-05 13:45:01.7404|DEBUG|Rest.Tests.BaseTest|*** Test 'UpdateUser_UserNewValuesAreCorrect_ResponseStatusCodeIsOK_UserIsUpdated' is started ***
+2025-08-05 13:45:01.7413|TRACE|Rest.Services.BaseService|Execute Get request '/zip-codes'
+2025-08-05 13:45:01.7508|INFO|Rest.Services.BaseService|Get request '/zip-codes' is executed successfully
+2025-08-05 13:45:01.7524|TRACE|Rest.Services.BaseService|Execute Get request '/users'
+2025-08-05 13:45:01.7612|INFO|Rest.Services.BaseService|Get request '/users' is executed successfully
+2025-08-05 13:45:01.7638|DEBUG|Rest.Tests.BaseTest|*** Test 'UpdateUser_UserNewValuesAreCorrect_ResponseStatusCodeIsOK_UserIsUpdated' is finished with 'Failed' status.***

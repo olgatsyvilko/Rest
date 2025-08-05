@@ -1,0 +1,4 @@
+2025-08-05 13:45:01.5582|DEBUG|Rest.Tests.BaseTest|*** Test 'GetUsers_FilteredByOlderAndYoungerAge_ResponseStatusCode_IsConflict' is started ***
+2025-08-05 13:45:01.5589|TRACE|Rest.Services.BaseService|Execute Get request '/users?olderThan=22&youngerThan=94'
+2025-08-05 13:45:01.5685|ERROR|Rest.Services.BaseService|Get request '/users?olderThan=22&youngerThan=94' is failed with status: Conflict and message: 
+2025-08-05 13:45:01.5697|DEBUG|Rest.Tests.BaseTest|*** Test 'GetUsers_FilteredByOlderAndYoungerAge_ResponseStatusCode_IsConflict' is finished with 'Passed' status.***
