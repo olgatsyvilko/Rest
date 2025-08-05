@@ -1,0 +1,10 @@
+2025-08-05 13:56:56.2689|DEBUG|Rest.Tests.BaseTest|*** Test 'DeleteUser_RequiredFieldIsMissed_ResponseStatusCodeIsConflict_UserIsNotDeleted_UsedZipCodeIsNotReturnedBack' is started ***
+2025-08-05 13:56:56.2689|TRACE|Rest.Services.BaseService|Execute Get request '/users'
+2025-08-05 13:56:56.2861|INFO|Rest.Services.BaseService|Get request '/users' is executed successfully
+2025-08-05 13:56:56.2872|TRACE|Rest.Services.BaseService|Execute Delete request '/users'
+2025-08-05 13:56:56.2934|ERROR|Rest.Services.BaseService|Delete request '/users' is failed with status: Conflict and message: 
+2025-08-05 13:56:56.2941|TRACE|Rest.Services.BaseService|Execute Get request '/users'
+2025-08-05 13:56:56.2990|INFO|Rest.Services.BaseService|Get request '/users' is executed successfully
+2025-08-05 13:56:56.2990|TRACE|Rest.Services.BaseService|Execute Get request '/zip-codes'
+2025-08-05 13:56:56.3045|INFO|Rest.Services.BaseService|Get request '/zip-codes' is executed successfully
+2025-08-05 13:56:56.3055|DEBUG|Rest.Tests.BaseTest|*** Test 'DeleteUser_RequiredFieldIsMissed_ResponseStatusCodeIsConflict_UserIsNotDeleted_UsedZipCodeIsNotReturnedBack' is finished with 'Passed' status.***

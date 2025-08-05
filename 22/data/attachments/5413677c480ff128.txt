@@ -1,0 +1,6 @@
+2025-08-05 13:56:56.4560|DEBUG|Rest.Tests.BaseTest|*** Test 'GetUsers_YoungerThanFilterApplied_FilteredUsersAreReturned' is started ***
+2025-08-05 13:56:56.4571|TRACE|Rest.Services.BaseService|Execute Get request '/users'
+2025-08-05 13:56:56.4613|INFO|Rest.Services.BaseService|Get request '/users' is executed successfully
+2025-08-05 13:56:56.4619|TRACE|Rest.Services.BaseService|Execute Get request '/users?youngerThan=55'
+2025-08-05 13:56:56.4666|INFO|Rest.Services.BaseService|Get request '/users?youngerThan=55' is executed successfully
+2025-08-05 13:56:56.4676|DEBUG|Rest.Tests.BaseTest|*** Test 'GetUsers_YoungerThanFilterApplied_FilteredUsersAreReturned' is finished with 'Passed' status.***

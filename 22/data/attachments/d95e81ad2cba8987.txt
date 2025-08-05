@@ -1,0 +1,8 @@
+2025-08-05 13:56:56.4693|DEBUG|Rest.Tests.BaseTest|*** Test 'PartiallyUpdateUser_NewZipCodeIsIncorrect_ResponseStatusCodeIsFailedDependency_UserIsNotUpdated' is started ***
+2025-08-05 13:56:56.4699|TRACE|Rest.Services.BaseService|Execute Get request '/users'
+2025-08-05 13:56:56.4757|INFO|Rest.Services.BaseService|Get request '/users' is executed successfully
+2025-08-05 13:56:56.4779|TRACE|Rest.Services.BaseService|Execute Patch request '/users'
+2025-08-05 13:56:56.4878|ERROR|Rest.Services.BaseService|Patch request '/users' is failed with status: FailedDependency and message: 
+2025-08-05 13:56:56.4885|TRACE|Rest.Services.BaseService|Execute Get request '/users'
+2025-08-05 13:56:56.4936|INFO|Rest.Services.BaseService|Get request '/users' is executed successfully
+2025-08-05 13:56:56.4950|DEBUG|Rest.Tests.BaseTest|*** Test 'PartiallyUpdateUser_NewZipCodeIsIncorrect_ResponseStatusCodeIsFailedDependency_UserIsNotUpdated' is finished with 'Failed' status.***

@@ -1,0 +1,4 @@
+2025-08-05 13:56:56.5129|DEBUG|Rest.Tests.BaseTest|*** Test 'PartiallyUpdateUser_UserNewValueIsCorrect_ResponseStatusCodeIsOK_UserIsUpdated' is started ***
+2025-08-05 13:56:56.5129|TRACE|Rest.Services.BaseService|Execute Get request '/users'
+2025-08-05 13:56:56.5199|INFO|Rest.Services.BaseService|Get request '/users' is executed successfully
+2025-08-05 13:56:56.5211|DEBUG|Rest.Tests.BaseTest|*** Test 'PartiallyUpdateUser_UserNewValueIsCorrect_ResponseStatusCodeIsOK_UserIsUpdated' is finished with 'Failed' status.***

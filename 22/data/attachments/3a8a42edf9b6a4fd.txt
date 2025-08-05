@@ -1,0 +1,6 @@
+2025-08-05 13:56:56.3921|DEBUG|Rest.Tests.BaseTest|*** Test 'GetUsers_FilteredByFemaleSex_FilteredUsersAreReturned' is started ***
+2025-08-05 13:56:56.3942|TRACE|Rest.Services.BaseService|Execute Get request '/users'
+2025-08-05 13:56:56.4058|INFO|Rest.Services.BaseService|Get request '/users' is executed successfully
+2025-08-05 13:56:56.4075|TRACE|Rest.Services.BaseService|Execute Get request '/users?sex=FEMALE'
+2025-08-05 13:56:56.4135|INFO|Rest.Services.BaseService|Get request '/users?sex=FEMALE' is executed successfully
+2025-08-05 13:56:56.4147|DEBUG|Rest.Tests.BaseTest|*** Test 'GetUsers_FilteredByFemaleSex_FilteredUsersAreReturned' is finished with 'Passed' status.***

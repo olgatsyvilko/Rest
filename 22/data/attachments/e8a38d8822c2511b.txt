@@ -1,0 +1,9 @@
+2025-08-05 13:56:56.6080|DEBUG|Rest.Tests.BaseTest|*** Test 'UploadUsers_AllFieldsAreFilledIn_ResponseStatusCodeIsCreated_UsersAreUploaded' is started ***
+2025-08-05 13:56:56.6091|TRACE|Rest.Services.BaseService|Execute Get request '/zip-codes'
+2025-08-05 13:56:56.6153|INFO|Rest.Services.BaseService|Get request '/zip-codes' is executed successfully
+2025-08-05 13:56:56.6162|TRACE|Rest.Services.BaseService|Add file: users.json
+2025-08-05 13:56:57.0756|TRACE|Rest.Services.BaseService|Execute Post request '/users/upload'
+2025-08-05 13:56:57.1092|INFO|Rest.Services.BaseService|Post request '/users/upload' is executed successfully
+2025-08-05 13:56:57.4912|TRACE|Rest.Services.BaseService|Execute Get request '/users'
+2025-08-05 13:56:57.4989|INFO|Rest.Services.BaseService|Get request '/users' is executed successfully
+2025-08-05 13:56:57.5000|DEBUG|Rest.Tests.BaseTest|*** Test 'UploadUsers_AllFieldsAreFilledIn_ResponseStatusCodeIsCreated_UsersAreUploaded' is finished with 'Passed' status.***

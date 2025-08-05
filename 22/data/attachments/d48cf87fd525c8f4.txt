@@ -1,0 +1,4 @@
+2025-08-05 13:56:57.6194|DEBUG|Rest.Tests.BaseTest|*** Test 'UploadUsers_UserHasMissedRequiredField_ResponseStatusCodeIsConflict_UsersAreNotUploaded' is started ***
+2025-08-05 13:56:57.6201|TRACE|Rest.Services.BaseService|Execute Get request '/zip-codes'
+2025-08-05 13:56:57.6312|INFO|Rest.Services.BaseService|Get request '/zip-codes' is executed successfully
+2025-08-05 13:56:57.6390|DEBUG|Rest.Tests.BaseTest|*** Test 'UploadUsers_UserHasMissedRequiredField_ResponseStatusCodeIsConflict_UsersAreNotUploaded' is finished with 'Failed' status.***

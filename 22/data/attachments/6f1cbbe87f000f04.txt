@@ -1,0 +1,10 @@
+2025-08-05 13:56:56.3067|DEBUG|Rest.Tests.BaseTest|*** Test 'DeleteUser_RequiredFieldsAreFilledIn_ResponseStatusCodeIsNoContent_UserIsDeleted_UsedZipCodeIsReturnedBack' is started ***
+2025-08-05 13:56:56.3072|TRACE|Rest.Services.BaseService|Execute Get request '/users'
+2025-08-05 13:56:56.3122|INFO|Rest.Services.BaseService|Get request '/users' is executed successfully
+2025-08-05 13:56:56.3132|TRACE|Rest.Services.BaseService|Execute Delete request '/users'
+2025-08-05 13:56:56.3182|INFO|Rest.Services.BaseService|Delete request '/users' is executed successfully
+2025-08-05 13:56:56.3182|TRACE|Rest.Services.BaseService|Execute Get request '/users'
+2025-08-05 13:56:56.3238|INFO|Rest.Services.BaseService|Get request '/users' is executed successfully
+2025-08-05 13:56:56.3246|TRACE|Rest.Services.BaseService|Execute Get request '/zip-codes'
+2025-08-05 13:56:56.3305|INFO|Rest.Services.BaseService|Get request '/zip-codes' is executed successfully
+2025-08-05 13:56:56.3319|DEBUG|Rest.Tests.BaseTest|*** Test 'DeleteUser_RequiredFieldsAreFilledIn_ResponseStatusCodeIsNoContent_UserIsDeleted_UsedZipCodeIsReturnedBack' is finished with 'Failed' status.***

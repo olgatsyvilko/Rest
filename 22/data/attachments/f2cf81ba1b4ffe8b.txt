@@ -1,0 +1,4 @@
+2025-08-05 13:56:58.1740|DEBUG|Rest.Tests.BaseTest|*** Test 'GetZipCodes_ResponseStatusCode_IsOK_ZipCodesAreReturned' is started ***
+2025-08-05 13:56:58.1740|TRACE|Rest.Services.BaseService|Execute Get request '/zip-codes'
+2025-08-05 13:56:58.1816|INFO|Rest.Services.BaseService|Get request '/zip-codes' is executed successfully
+2025-08-05 13:56:58.2185|DEBUG|Rest.Tests.BaseTest|*** Test 'GetZipCodes_ResponseStatusCode_IsOK_ZipCodesAreReturned' is finished with 'Failed' status.***

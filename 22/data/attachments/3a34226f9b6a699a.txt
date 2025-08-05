@@ -1,0 +1,6 @@
+2025-08-05 13:56:56.2179|DEBUG|Rest.Tests.BaseTest|*** Test 'CreateUser_ZipCodeIsIncorrect_ResponseStatusCodeIsFailedDependency_UserIsNotAdded' is started ***
+2025-08-05 13:56:56.2179|TRACE|Rest.Services.BaseService|Execute Post request '/users'
+2025-08-05 13:56:56.2247|ERROR|Rest.Services.BaseService|Post request '/users' is failed with status: FailedDependency and message: 
+2025-08-05 13:56:56.2255|TRACE|Rest.Services.BaseService|Execute Get request '/users'
+2025-08-05 13:56:56.2306|INFO|Rest.Services.BaseService|Get request '/users' is executed successfully
+2025-08-05 13:56:56.2317|DEBUG|Rest.Tests.BaseTest|*** Test 'CreateUser_ZipCodeIsIncorrect_ResponseStatusCodeIsFailedDependency_UserIsNotAdded' is finished with 'Passed' status.***

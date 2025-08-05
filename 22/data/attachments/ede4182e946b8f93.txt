@@ -1,0 +1,6 @@
+2025-08-05 13:56:56.1996|DEBUG|Rest.Tests.BaseTest|*** Test 'CreateUser_SexFieldIsMissed_ResponseStatusCodeIsConflict_UserIsNotAdded' is started ***
+2025-08-05 13:56:56.2004|TRACE|Rest.Services.BaseService|Execute Post request '/users'
+2025-08-05 13:56:56.2084|ERROR|Rest.Services.BaseService|Post request '/users' is failed with status: Conflict and message: 
+2025-08-05 13:56:56.2092|TRACE|Rest.Services.BaseService|Execute Get request '/users'
+2025-08-05 13:56:56.2155|INFO|Rest.Services.BaseService|Get request '/users' is executed successfully
+2025-08-05 13:56:56.2166|DEBUG|Rest.Tests.BaseTest|*** Test 'CreateUser_SexFieldIsMissed_ResponseStatusCodeIsConflict_UserIsNotAdded' is finished with 'Passed' status.***

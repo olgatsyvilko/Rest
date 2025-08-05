@@ -1,0 +1,4 @@
+2025-08-05 13:56:56.5654|DEBUG|Rest.Tests.BaseTest|*** Test 'UpdateUser_UserNewValuesAreNull_ResponseStatusCodeIsBadRequest' is started ***
+2025-08-05 13:56:56.5659|TRACE|Rest.Services.BaseService|Execute Get request '/users'
+2025-08-05 13:56:56.5714|INFO|Rest.Services.BaseService|Get request '/users' is executed successfully
+2025-08-05 13:56:56.5729|DEBUG|Rest.Tests.BaseTest|*** Test 'UpdateUser_UserNewValuesAreNull_ResponseStatusCodeIsBadRequest' is finished with 'Failed' status.***
