@@ -28,6 +28,8 @@ jobs:
         run: dotnet test Rest.sln --logger "trx"
 
       - name: Verify allure-results directory
+        if: always()
+        continue-on-error: true
         run: |
          if [ -d "Rest/bin/Debug/net8.0/allure-results" ]; then
          echo "✅ allure-results directory exists."
@@ -37,6 +39,8 @@ jobs:
          exit 1
 
       - name: Search for allure-results folder
+        if: always()
+        continue-on-error: true
         run: |
          echo "🔍 Searching for allure-results folder..."
          FOUND_PATH=$(find . -type d -name "allure-results" | head -n 1)
