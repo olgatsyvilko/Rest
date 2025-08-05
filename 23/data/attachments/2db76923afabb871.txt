@@ -1,0 +1,4 @@
+2025-08-05 14:05:39.9387|DEBUG|Rest.Tests.BaseTest|*** Test 'GetUsers_ResponseStatusCode_IsOK_UsersAreReturned' is started ***
+2025-08-05 14:05:39.9387|TRACE|Rest.Services.BaseService|Execute Get request '/users'
+2025-08-05 14:05:39.9435|INFO|Rest.Services.BaseService|Get request '/users' is executed successfully
+2025-08-05 14:05:39.9449|DEBUG|Rest.Tests.BaseTest|*** Test 'GetUsers_ResponseStatusCode_IsOK_UsersAreReturned' is finished with 'Failed' status.***

@@ -1,0 +1,8 @@
+2025-08-05 14:05:42.9216|DEBUG|Rest.Tests.BaseTest|*** Test 'ExpandZipCodes_NewZipCodesHaveDublicates_DublicatesAreNotAdded' is started ***
+2025-08-05 14:05:42.9224|TRACE|Rest.Services.BaseService|Execute Get request '/zip-codes'
+2025-08-05 14:05:42.9288|INFO|Rest.Services.BaseService|Get request '/zip-codes' is executed successfully
+2025-08-05 14:05:42.9302|TRACE|Rest.Services.BaseService|Execute Post request '/zip-codes/expand'
+2025-08-05 14:05:42.9376|INFO|Rest.Services.BaseService|Post request '/zip-codes/expand' is executed successfully
+2025-08-05 14:05:42.9387|TRACE|Rest.Services.BaseService|Execute Get request '/zip-codes'
+2025-08-05 14:05:42.9456|INFO|Rest.Services.BaseService|Get request '/zip-codes' is executed successfully
+2025-08-05 14:05:42.9469|DEBUG|Rest.Tests.BaseTest|*** Test 'ExpandZipCodes_NewZipCodesHaveDublicates_DublicatesAreNotAdded' is finished with 'Passed' status.***

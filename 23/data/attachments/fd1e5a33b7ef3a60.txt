@@ -1,0 +1,9 @@
+2025-08-05 14:05:40.1114|DEBUG|Rest.Tests.BaseTest|*** Test 'UploadUsers_AllFieldsAreFilledIn_ResponseStatusCodeIsCreated_UsersAreUploaded' is started ***
+2025-08-05 14:05:40.1129|TRACE|Rest.Services.BaseService|Execute Get request '/zip-codes'
+2025-08-05 14:05:40.1186|INFO|Rest.Services.BaseService|Get request '/zip-codes' is executed successfully
+2025-08-05 14:05:40.1198|TRACE|Rest.Services.BaseService|Add file: users.json
+2025-08-05 14:05:40.5777|TRACE|Rest.Services.BaseService|Execute Post request '/users/upload'
+2025-08-05 14:05:40.6119|ERROR|Rest.Services.BaseService|Post request '/users/upload' is failed with status: FailedDependency and message: 
+2025-08-05 14:05:41.0224|TRACE|Rest.Services.BaseService|Execute Get request '/users'
+2025-08-05 14:05:41.0312|INFO|Rest.Services.BaseService|Get request '/users' is executed successfully
+2025-08-05 14:05:41.0333|DEBUG|Rest.Tests.BaseTest|*** Test 'UploadUsers_AllFieldsAreFilledIn_ResponseStatusCodeIsCreated_UsersAreUploaded' is finished with 'Failed' status.***

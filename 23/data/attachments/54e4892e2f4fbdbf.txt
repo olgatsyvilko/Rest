@@ -1,0 +1,10 @@
+2025-08-05 14:05:38.8479|DEBUG|Rest.Tests.BaseTest|*** Test 'CreateUser_AllFieldsAreFilledIn_ResponseStatusCodeIsCreated_UserIsAdded_UsedZipCodeIsRemoved' is started ***
+2025-08-05 14:05:38.8936|TRACE|Rest.Services.BaseService|Execute Get request '/zip-codes'
+2025-08-05 14:05:39.1717|INFO|Rest.Services.BaseService|Get request '/zip-codes' is executed successfully
+2025-08-05 14:05:39.2064|TRACE|Rest.Services.BaseService|Execute Post request '/users'
+2025-08-05 14:05:39.3503|INFO|Rest.Services.BaseService|Post request '/users' is executed successfully
+2025-08-05 14:05:39.3517|TRACE|Rest.Services.BaseService|Execute Get request '/users'
+2025-08-05 14:05:39.3832|INFO|Rest.Services.BaseService|Get request '/users' is executed successfully
+2025-08-05 14:05:39.3873|TRACE|Rest.Services.BaseService|Execute Get request '/zip-codes'
+2025-08-05 14:05:39.4002|INFO|Rest.Services.BaseService|Get request '/zip-codes' is executed successfully
+2025-08-05 14:05:39.4064|DEBUG|Rest.Tests.BaseTest|*** Test 'CreateUser_AllFieldsAreFilledIn_ResponseStatusCodeIsCreated_UserIsAdded_UsedZipCodeIsRemoved' is finished with 'Passed' status.***

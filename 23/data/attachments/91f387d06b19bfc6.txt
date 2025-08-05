@@ -1,0 +1,4 @@
+2025-08-05 14:05:39.9751|DEBUG|Rest.Tests.BaseTest|*** Test 'PartiallyUpdateUser_UserNewValueIsCorrect_RequiredFiledIsMissed_ResponseStatusCodeIsConflict_UserIsNotUpdated' is started ***
+2025-08-05 14:05:39.9751|TRACE|Rest.Services.BaseService|Execute Get request '/users'
+2025-08-05 14:05:39.9847|INFO|Rest.Services.BaseService|Get request '/users' is executed successfully
+2025-08-05 14:05:39.9860|DEBUG|Rest.Tests.BaseTest|*** Test 'PartiallyUpdateUser_UserNewValueIsCorrect_RequiredFiledIsMissed_ResponseStatusCodeIsConflict_UserIsNotUpdated' is finished with 'Failed' status.***

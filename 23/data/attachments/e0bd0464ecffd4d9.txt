@@ -1,0 +1,9 @@
+2025-08-05 14:05:41.1294|DEBUG|Rest.Tests.BaseTest|*** Test 'UploadUsers_UserHasInvalidZipCode_ResponseStatusCodeIsFailedDependency_UsersAreNotUploaded' is started ***
+2025-08-05 14:05:41.1309|TRACE|Rest.Services.BaseService|Execute Get request '/zip-codes'
+2025-08-05 14:05:41.1398|INFO|Rest.Services.BaseService|Get request '/zip-codes' is executed successfully
+2025-08-05 14:05:41.1410|TRACE|Rest.Services.BaseService|Add file: usersHasInvalidZipCode.json
+2025-08-05 14:05:41.5325|TRACE|Rest.Services.BaseService|Execute Post request '/users/upload'
+2025-08-05 14:05:41.5435|ERROR|Rest.Services.BaseService|Post request '/users/upload' is failed with status: FailedDependency and message: 
+2025-08-05 14:05:41.9010|TRACE|Rest.Services.BaseService|Execute Get request '/users'
+2025-08-05 14:05:41.9083|INFO|Rest.Services.BaseService|Get request '/users' is executed successfully
+2025-08-05 14:05:41.9096|DEBUG|Rest.Tests.BaseTest|*** Test 'UploadUsers_UserHasInvalidZipCode_ResponseStatusCodeIsFailedDependency_UsersAreNotUploaded' is finished with 'Passed' status.***

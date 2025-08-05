@@ -1,0 +1,4 @@
+2025-08-05 14:05:42.8810|DEBUG|Rest.Tests.BaseTest|*** Test 'CallExpandZipCodes_ResponseStatusCode_IsCreated' is started ***
+2025-08-05 14:05:42.8821|TRACE|Rest.Services.BaseService|Execute Post request '/zip-codes/expand'
+2025-08-05 14:05:42.9008|INFO|Rest.Services.BaseService|Post request '/zip-codes/expand' is executed successfully
+2025-08-05 14:05:42.9022|DEBUG|Rest.Tests.BaseTest|*** Test 'CallExpandZipCodes_ResponseStatusCode_IsCreated' is finished with 'Passed' status.***

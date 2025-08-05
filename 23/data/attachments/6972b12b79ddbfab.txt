@@ -1,0 +1,4 @@
+2025-08-05 14:05:39.9961|DEBUG|Rest.Tests.BaseTest|*** Test 'UpdateUser_NewZipCodeIsIncorrect_ResponseStatusCodeIsFailedDependency_UserIsNotUpdated' is started ***
+2025-08-05 14:05:39.9972|TRACE|Rest.Services.BaseService|Execute Get request '/users'
+2025-08-05 14:05:40.0037|INFO|Rest.Services.BaseService|Get request '/users' is executed successfully
+2025-08-05 14:05:40.0057|DEBUG|Rest.Tests.BaseTest|*** Test 'UpdateUser_NewZipCodeIsIncorrect_ResponseStatusCodeIsFailedDependency_UserIsNotUpdated' is finished with 'Failed' status.***

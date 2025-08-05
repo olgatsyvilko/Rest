@@ -1,0 +1,6 @@
+2025-08-05 14:05:39.5688|DEBUG|Rest.Tests.BaseTest|*** Test 'CreateUser_RequiredFieldsAreFilledIn_ResponseStatusCodeIsCreated_UserIsAdded' is started ***
+2025-08-05 14:05:39.5688|TRACE|Rest.Services.BaseService|Execute Post request '/users'
+2025-08-05 14:05:39.5837|INFO|Rest.Services.BaseService|Post request '/users' is executed successfully
+2025-08-05 14:05:39.5837|TRACE|Rest.Services.BaseService|Execute Get request '/users'
+2025-08-05 14:05:39.5939|INFO|Rest.Services.BaseService|Get request '/users' is executed successfully
+2025-08-05 14:05:39.5955|DEBUG|Rest.Tests.BaseTest|*** Test 'CreateUser_RequiredFieldsAreFilledIn_ResponseStatusCodeIsCreated_UserIsAdded' is finished with 'Passed' status.***

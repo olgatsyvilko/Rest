@@ -1,0 +1,6 @@
+2025-08-05 14:05:40.0074|DEBUG|Rest.Tests.BaseTest|*** Test 'UpdateUser_RequiredFieldIsMissed_ResponseStatusCodeIsConflict_UserIsNotUpdated' is started ***
+2025-08-05 14:05:40.0080|TRACE|Rest.Services.BaseService|Execute Get request '/zip-codes'
+2025-08-05 14:05:40.0190|INFO|Rest.Services.BaseService|Get request '/zip-codes' is executed successfully
+2025-08-05 14:05:40.0203|TRACE|Rest.Services.BaseService|Execute Get request '/users'
+2025-08-05 14:05:40.0329|INFO|Rest.Services.BaseService|Get request '/users' is executed successfully
+2025-08-05 14:05:40.0347|DEBUG|Rest.Tests.BaseTest|*** Test 'UpdateUser_RequiredFieldIsMissed_ResponseStatusCodeIsConflict_UserIsNotUpdated' is finished with 'Failed' status.***

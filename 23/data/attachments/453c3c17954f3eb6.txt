@@ -1,0 +1,6 @@
+2025-08-05 14:05:42.9034|DEBUG|Rest.Tests.BaseTest|*** Test 'ExpandZipCodes_NewZipCodes_AreAddedToAvailable' is started ***
+2025-08-05 14:05:42.9043|TRACE|Rest.Services.BaseService|Execute Post request '/zip-codes/expand'
+2025-08-05 14:05:42.9112|INFO|Rest.Services.BaseService|Post request '/zip-codes/expand' is executed successfully
+2025-08-05 14:05:42.9123|TRACE|Rest.Services.BaseService|Execute Get request '/zip-codes'
+2025-08-05 14:05:42.9191|INFO|Rest.Services.BaseService|Get request '/zip-codes' is executed successfully
+2025-08-05 14:05:42.9202|DEBUG|Rest.Tests.BaseTest|*** Test 'ExpandZipCodes_NewZipCodes_AreAddedToAvailable' is finished with 'Passed' status.***

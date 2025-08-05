@@ -1,0 +1,9 @@
+2025-08-05 14:05:42.0015|DEBUG|Rest.Tests.BaseTest|*** Test 'UploadUsers_UserHasMissedRequiredField_ResponseStatusCodeIsConflict_UsersAreNotUploaded' is started ***
+2025-08-05 14:05:42.0023|TRACE|Rest.Services.BaseService|Execute Get request '/zip-codes'
+2025-08-05 14:05:42.0090|INFO|Rest.Services.BaseService|Get request '/zip-codes' is executed successfully
+2025-08-05 14:05:42.0100|TRACE|Rest.Services.BaseService|Add file: usersHasMissedRequiredField.json
+2025-08-05 14:05:42.3650|TRACE|Rest.Services.BaseService|Execute Post request '/users/upload'
+2025-08-05 14:05:42.3766|ERROR|Rest.Services.BaseService|Post request '/users/upload' is failed with status: Conflict and message: 
+2025-08-05 14:05:42.7423|TRACE|Rest.Services.BaseService|Execute Get request '/users'
+2025-08-05 14:05:42.7500|INFO|Rest.Services.BaseService|Get request '/users' is executed successfully
+2025-08-05 14:05:42.7512|DEBUG|Rest.Tests.BaseTest|*** Test 'UploadUsers_UserHasMissedRequiredField_ResponseStatusCodeIsConflict_UsersAreNotUploaded' is finished with 'Passed' status.***
